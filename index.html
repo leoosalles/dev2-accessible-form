@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script type="text/javascript" src="./src/js/index.js" defer></script>
+    <title>Formulário</title>
+</head>
+
+<body>
+    <main>
+        <section class="text-content" role="region" aria-label="Contact information">
+            <div class="text-container">
+                <h1 class="main-heading">Ficou com dúvida? Nos mande uma mensagem!</h1>
+                <p class="main-text">Caso tenha alguma dúvida, preencha o formulário ao lado e entraremos em contato em até 24 horas.</p>
+            </div>
+        </section>
+        <section class="form" role="region">
+            <form novalidate>
+                <fieldset>
+                    <legend class="sr-only">Formulário de contato</legend>
+
+                    <div class="input-container">
+                        <input
+                            type="text"
+                            class="input-field" aria-label="Name" aria-required="true"
+                            aria-describedby="name-warning"placeholder="Nome completo *" required>
+                        <span
+                            class="popover-message" id="name-warning"
+                            role="alert"
+                            aria-live="assertive">campo obrigatório
+                        </span>
+                        <input
+                            type="email" class="input-field" aria-label="Email" aria-describedby="email-warning"
+                            aria-required="true" placeholder="Email *"
+                            required>
+                        <span
+                            class="popover-message" id="email-warning"
+                            role="alert"
+                            aria-live="assertive">campo obrigatório
+                        </span>
+                        <input
+                            type="tel"
+                            class="input-field" aria-label="Telephone number"
+                            aria-describedby="phone-warning"
+                            aria-required="true" placeholder="Telefone *" required>
+                        <span
+                            class="popover-message" id="phone-warning"
+                            role="alert"
+                            aria-live="assertive">campo obrigatório
+                        </span>
+                        <textarea
+                            class="input-field"
+                            aria-label="Message"
+                            aria-describedby="message-warning"
+                            aria-required="true" placeholder="Mensagem *"
+                            required></textarea>
+                        <span
+                            class="popover-message" id="message-warning" role="alert"
+                            aria-live="assertive">campo obrigatório
+                        </span>
+
+                        <p class="warning">*campos obrigatórios</p>
+                    </div>
+
+                    <button type="submit" id="btn">Enviar</button>
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
