@@ -118,14 +118,14 @@ const submitBtn = document.getElementById('btn');
 ```
 **Explanation:** You are selecting all input fields (`.input-field`) and the submit button (`#btn`) to manipulate them later in the code.<br><br>
 
-### 2. getWarningElement Function
+### 2. Get Warning Message Element Function
 ```js
 function getWarningElement(input) {
     const warningId = input.getAttribute('aria-describedby');
     return document.getElementById(warningId);
 }
 ```
-#### `function getWarningElement(input) {}`
+#### `function getWarningElement(input) {`
 - **Purpose:** This function takes an input element as an argument and returns the associated warning message element based on the `aria-describedby` attribute.
 - **Explanation:** This function is used to retrieve the error message or warning associated with a specific input field. It's particularly useful when you need to display or hide validation messages dynamically.
 
@@ -144,7 +144,7 @@ function isEmailValid(email) {
     return regex.test(email);
 }
 ```
-#### `function isEmailValid(email) {}`
+#### `function isEmailValid(email) {`
 - **Purpose:** This function checks if the provided email address matches the standard email format using a regular expression.
 - **Explanation:** It's used to validate email fields by checking if the provided email is in a proper format (e.g., `user@example.com`).
 
@@ -191,7 +191,7 @@ function validateFields() {
     submitBtn.disabled = hasEmptField;
 };
 ```
-#### `function validateFields() {}`
+#### `function validateFields() {`
 - **Purpose:** This is the declaration of the `validateFields` function, which is responsible for validating all input fields in the form. It checks each field for any errors and dynamically updates the user interface (e.g., adding visual feedback for errors and updating the state of the submit button).
 
 #### `let hasEmptField = false;`
@@ -280,7 +280,7 @@ function clearFields() {
     });
 };
 ```
-#### `function clearFields() {}`
+#### `function clearFields() {`
 - **Purpose:** This function clears the values, validation states, and error messages of all form input fields.
 - **Explanation:** It resets the form fields, removing any error messages and restoring the form to its initial state after submission or when clearing the form.
 
@@ -316,7 +316,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     };
 });
 ```
-#### `document.querySelector('form').addEventListener('submit', (e) => {}`
+#### `document.querySelector('form').addEventListener('submit', (e) => {`
 - **Purpose:** This attaches an event listener to the form that listens for the `submit` event.
 - **Explanation:** When the user submits the form (by clicking the submit button or pressing Enter), the following callback function will be triggered.
 
@@ -355,9 +355,9 @@ inputFields.forEach((input) => {
 - **Explanation:** Whenever the user types in an input field, the `validateFields` function is called to validate the field in real-time. This ensures that any errors are caught immediately as the user fills out the form.
 
 #### Summary:
-**1. `clearFields`:** This function clears the values, removes the visual feedback, and resets the form validation states.<br>
-**2. Form Submit Handling:** When the form is submitted, it first prevents the default submission, validates the fields, and, if valid, shows a success message and clears the form.<br>
-**3. Real-time Validation:** The input event listener ensures that the form fields are validated in real-time as the user types.
+- **`clearFields`:** This function clears the values, removes the visual feedback, and resets the form validation states.
+- **Form Submit Handling:** When the form is submitted, it first prevents the default submission, validates the fields, and, if valid, shows a success message and clears the form.
+- **Real-time Validation:** The input event listener ensures that the form fields are validated in real-time as the user types.
 
 ---
 
